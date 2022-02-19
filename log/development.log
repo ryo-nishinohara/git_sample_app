@@ -813,3 +813,24 @@ Processing by HomeController#page_a as HTML
 Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/home/page_a" for ::1 at 2022-02-20 01:17:45 +0900
+Processing by HomeController#page_a as HTML
+  Rendering home/page_a.html.erb within layouts/application
+  Rendered home/page_a.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 121ms (Views: 118.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/page_b" for ::1 at 2022-02-20 01:18:33 +0900
+Processing by HomeController#page_b as HTML
+  Rendering home/page_b.html.erb within layouts/application
+  Rendered home/page_b.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 45ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/page_a" for ::1 at 2022-02-20 01:18:33 +0900
+Processing by HomeController#page_a as HTML
+  Rendering home/page_a.html.erb within layouts/application
+  Rendered home/page_a.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
