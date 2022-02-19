@@ -1,0 +1,19 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.link [name="link_button"]{
+    margin: 15px;
+}
