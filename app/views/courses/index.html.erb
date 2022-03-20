@@ -1,0 +1,5 @@
+<div>
+    <%  @courses.each do |course| %>
+        <%= link_to(course.name,"/courses/#{course.id}") %>
+    <% end %>
+</div>

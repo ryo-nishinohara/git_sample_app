@@ -1,0 +1,26 @@
+<%= form_tag("/requests/create") do %>
+
+    <% @request.errors.full_messages.each do |message| %>
+        <div>
+            <%= message %>
+        </div>
+    <% end %>
+
+    <div>
+        user_name
+        <textarea name="user_name"><%= @request.user_name %></textarea>
+    </div>
+
+    <div>
+        email
+        <textarea name="email"><%= @request.email %></textarea>
+    </div>
+
+    <div>
+        content
+        <textarea name="content"><%= @request.content %></textarea>
+    </div>
+
+    <input type="submit" value="内容を確定して送信する">
+
+<% end %>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SHARERuby26</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div>
+      <%= link_to("トップページ", "/") %>
+      <%= link_to("W-SHAREとは？", "/about") %>
+      <%= link_to("授業一覧", "/courses/index") %>
+      <%= link_to("研究室一覧", "/labs/index") %>
+      <%= link_to("ご要望", "/requests/new") %>
+    </div>
+
+    <%= flash[:notice] %>
+    <%= yield %>
+  </body>
+</html>

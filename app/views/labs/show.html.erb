@@ -1,0 +1,40 @@
+
+<div>
+    研究室名：
+    <%= @lab.name %>
+    <br>
+    研究内容
+    <%= @lab.major %>
+    <br>
+    コアタイム
+    <%= @lab.core_time_start_hour %>：<%= @lab.core_time_start_min %>～<%= @lab.core_time_end_hour %>：<%= @lab.core_time_end_min %>
+    <br>
+    教授：
+    <%= @lab.professor %>
+    <br>
+    研究室難易度：
+    <%= @average_of_difficulity.round(2) %>
+    <br>
+    研究室の面白さ：
+    <%= @average_of_fun.round(2) %>
+    <br>
+    レビュー数：
+    <%= @number_of_reviews %>
+    
+<div>
+<div>
+    <%= link_to("#{@lab.name}をレビュー", "/review_labs/#{@lab.id}/new") %>
+</div>
+
+<div>
+    <%  @reviews.each do |review| %>
+        ユーザー名：<%=  review.user_name %>
+        <br>
+        授業難易度：<%= review.difficulity %>
+        <br>
+        面白さ：<%= review.fun %>
+        <br>
+        レビュー：<%= review.free_review %>
+        <br>
+    <% end %>
+</div>

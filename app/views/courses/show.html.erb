@@ -1,0 +1,57 @@
+<div>
+    講義名：
+    <%= @course.name %>
+    <br>
+    科目区分：
+    <%= @course.classification %>
+    <br>
+    授業曜日・時間
+    <%= @course.class_period_day_of_week %>曜日
+    <%= @course.class_period_timetable %>時限目
+    <br>
+    単位数：
+    <%= @course.credit %>
+    <br>
+    教授：
+    <%= @course.professor %>
+    <br>
+    授業難易度：
+    <%= @average_of_difficulity.round(2)  %>
+    <br>
+    授業の面白さ：
+    <%= @average_of_fun.round(2) %>
+    <br>
+    単位取得率：
+    <% if @pass_rate != -1 %>
+        <%= @pass_rate.round(2) %> %
+    <% else %>   
+        No Data
+    <% end %>
+    <br>
+    成績割合：
+    試験<%= @course.ratio_exam %>：出席<%= @course.ratio_attendance %>
+    <br>
+    出席の必要性：
+    <%= @course.necessity_of_attendance %>
+    <br>
+    レビュー数：
+    <%= @number_of_reviews %>
+    
+<div>
+
+<div>
+    <%= link_to("#{@course.name}をレビュー", "/review_courses/#{params[:course_id]}/new") %>
+</div>
+
+<div>
+    <%  @reviews.each do |review| %>
+        ユーザー名：<%=  review.user_name %>
+        <br>
+        授業難易度：<%= review.difficulity %>
+        <br>
+        面白さ：<%= review.fun %>
+        <br>
+        レビュー：<%= review.free_review %>
+        <br>
+    <% end %>
+</div>

@@ -1,0 +1,54 @@
+<%= @lab.name%>
+
+<%= form_tag("/review_labs/#{params[:lab_id]}/create") do %>
+
+    <% @review.errors.full_messages.each do |message| %>
+        <div>
+            <%= message %>
+        </div>
+    <% end %>
+
+    <div>
+        user_name
+        <textarea name="user_name"><%= @review.user_name %></textarea>
+    </div>
+
+    <div>
+        difficulity
+        <textarea name="difficulity"><%= @review.difficulity %></textarea>
+    </div>
+
+    <div>
+        fun
+        <textarea name="fun"><%= @review.fun %></textarea>
+    </div>
+
+    <div>
+        core_time_start_hour
+        <textarea name="core_time_start_hour"><%= @review.core_time_start_hour %></textarea>
+    </div>
+
+    <div>
+        core_time_start_min
+        <textarea name="core_time_start_min"><%= @review.core_time_start_min %></textarea>
+    </div>
+
+    <div>
+        core_time_end_hour
+        <textarea name="core_time_end_hour"><%= @review.core_time_end_hour %></textarea>
+    </div>
+
+    <div>
+        core_time_end_min
+        <textarea name="core_time_end_min"><%= @review.core_time_end_min %></textarea>
+    </div>
+
+    <div>
+        free_review
+        <textarea name="free_review"><%= @review.free_review %></textarea>
+    </div>
+
+    <div>
+        <input type="submit", value="内容を確定して投稿する">
+    </div>
+<% end %>

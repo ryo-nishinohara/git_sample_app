@@ -1,0 +1,5 @@
+<div>
+    <%  @labs.each do |lab| %>
+        <%= link_to(lab.name,"/labs/#{lab.id}") %>
+    <% end %>
+</div>
