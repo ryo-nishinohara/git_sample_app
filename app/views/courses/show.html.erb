@@ -1,3 +1,4 @@
+<!--#授業情報を表示させるための処理-->
 <div>
     講義名：
     <%= @course.name %>
@@ -22,8 +23,10 @@
     <%= @average_of_fun.round(2) %>
     <br>
     単位取得率：
+    <!--#分母が0でないときは値を表示させる-->
     <% if @pass_rate != -1 %>
         <%= @pass_rate.round(2) %> %
+    <!--#分母が0の時はNo Data都表示させる-->
     <% else %>   
         No Data
     <% end %>
@@ -39,10 +42,12 @@
     
 <div>
 
+<!--#レビューページに遷移するためのリンク-->
 <div>
     <%= link_to("#{@course.name}をレビュー", "/review_courses/#{params[:course_id]}/new") %>
 </div>
 
+<!--#対応する授業に関する全レビューを表示-->
 <div>
     <%  @reviews.each do |review| %>
         ユーザー名：<%=  review.user_name %>

@@ -1,4 +1,4 @@
-
+<!--#研究室の詳細情報を表示させる処理-->
 <div>
     研究室名：
     <%= @lab.name %>
@@ -22,10 +22,13 @@
     <%= @number_of_reviews %>
     
 <div>
+
+<!--#レビューページに遷移するためのリンク-->
 <div>
     <%= link_to("#{@lab.name}をレビュー", "/review_labs/#{@lab.id}/new") %>
 </div>
 
+<!--#対応する研究室の全レビューを表示-->
 <div>
     <%  @reviews.each do |review| %>
         ユーザー名：<%=  review.user_name %>

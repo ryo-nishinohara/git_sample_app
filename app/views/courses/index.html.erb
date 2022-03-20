@@ -1,3 +1,4 @@
+<!--#全授業名を表示させるための処理-->
 <div>
     <%  @courses.each do |course| %>
         <%= link_to(course.name,"/courses/#{course.id}") %>

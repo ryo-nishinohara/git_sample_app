@@ -1,13 +1,17 @@
+<!--#授業名を表示-->
 <%= @course.name%>
 
+<!--#フォーム-->
 <%= form_tag("/review_courses/#{params[:course_id]}/create") do %>
 
+<!--#エラーメッセージ-->
     <% @review.errors.full_messages.each do |message| %>
         <div>
             <%= message %>
         </div>
     <% end %>
 
+    <!--#各値の入力欄-->
     <div>
         user_name
         <textarea name="user_name"><%= @review.user_name %></textarea>
@@ -38,6 +42,7 @@
         <textarea name="free_review"><%= @review.free_review %></textarea>
     </div>
 
+    <!--#送信ボタン-->
     <div>
         <input type="submit", value="内容を確定して投稿する">
     </div>

@@ -1,3 +1,4 @@
+<!--#　全研究室を表示させる処理-->
 <div>
     <%  @labs.each do |lab| %>
         <%= link_to(lab.name,"/labs/#{lab.id}") %>
